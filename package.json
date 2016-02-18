@@ -1,0 +1,29 @@
+{
+  "name": "loopie-bot",
+  "version": "0.1.0",
+  "description": "Slack Bot integration for Loopline Systems",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/radibit/loopiebot.git"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "slackbot",
+    "jstips"
+  ],
+  "engines": {
+    "node": "5.1.x"
+  },
+  "author": "radimir bitsov <radimir.bitsov@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/radibit/loopiebot/issues"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "slackbots": "^0.5.1"
+  }
+}
