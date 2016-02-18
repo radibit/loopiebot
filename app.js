@@ -31,7 +31,7 @@ app.get( '/', function ( req, res ) {
       console.log( info );
       console.log( body );
 
-      res.status( 200 ).send( body );
+      res.status( 200 ).send( info.title + '\n' + info.description );
     }
   } );
 } );
