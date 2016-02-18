@@ -28,10 +28,17 @@ app.get( '/', function ( req, res ) {
   request( options, function( error, response, body ) {
     if ( !error && response.statusCode == 200 ) {
       var info = JSON.parse( body );
-      console.log( info );
       console.log( body );
 
-      res.status( 200 ).send( info.title + '\n' + info.description );
+      var response = 'Your active objectives are: \n';
+
+      for ( var i = 0; i < info.length; i++ ) {
+        response += 'Title: ' + info[ i ].title + '\n';
+        response += 'Description: ' + info[ i ].description + '\n';
+        response += 'Progress: ' + info[ i ].progressSupervisee + '\n';
+      }
+
+      res.status( 200 ).send( response );
     }
   } );
 } );
