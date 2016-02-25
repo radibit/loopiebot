@@ -36,6 +36,8 @@ app.get( '/', function ( req, res ) {
         response += 'Title: ' + info[ i ].title + '\n';
         response += 'Description: ' + info[ i ].description + '\n';
         response += 'Progress: ' + info[ i ].progressSupervisee + '\n';
+
+        response += '------ \n'
       }
 
       res.status( 200 ).send( response );
